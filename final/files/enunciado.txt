@@ -1,0 +1,62 @@
+COMPUTACION II
+==============
+
+TP4
+---
+
+Fecha de entrega: 6/10/15
+
+
+Enunciado
+~~~~~~~~~
+
+El objetivo del práctico es desarrollar un servidor web multi-proceso (usando fork()) que pueda 
+atender múltiples conexiones simultáneas.
+
+
+Requisitos
+~~~~~~~~~~
+
+* No se recibirá el tp que no tenga el Makefile correspondiente.
+
+* No se recibirá el tp que no tenga como mínimo 3 módulos.
+
+* Se deberá utilizar el main.c del tp y no se podrá modificar, excepto la parte en donde se requiere
+agregar la creación y configuración del socket de escucha. El código del alumno deberá adaptarse a 
+ese main.c.
+
+* Deberá soportar al menos diez accesos concurrentes y mil requerimientos por acceso (Apache 
+benchmark: "ab -c 10 -n 1000" ... man ab).
+
+* Deberá poder manejar, al menos, 4 tipos de archivos: jpeg, html, text y pdf (ver mime types).
+
+* Deberá devolver, como mínimo, tres tipos de resultados al cliente: 200 Ok, 404 Not Found y 500 
+Internal Server Error (Ver especificación de HTTP 1.0).
+
+
+Todo lo que no está especificado en este enunciado queda a consideración de los alumnos.
+
+
+Ejemplo de uso
+~~~~~~~~~~~~~~
+
+-----------------------------
+$ ./tp3 -d <document_root>
+
+$ ./tp3 -d public/
+-----------------------------
+
+
+Tips
+~~~~
+
+* Dividir la resolución por etapas como se discutió en clase. Comenzar lo más sencillo posible, 
+intentando conseguir una versión funcional con las caracterísiticas mínimas indispensables para
+poder probar el prototipo.
+
+* mime types en /etc/mime.types
+
+* RFC 1945 - Hypertext Transfer Protocol -- HTTP/1.0
+
+* Ver concepto de URI, URL, Mime Yype, cabecera HTTP (request y response), HTTP Status Code, HTTP Body.
+
