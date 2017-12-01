@@ -111,7 +111,7 @@ int main(int argc, char * const *argv)
 pid_t pid;
 
 
-/*      char *const parmList[] = {"./voice/pocketsphinx-5prealpha/src/programs/pocketsphinx_continuous","-inmic", "yes", "-lm","7301.lm","-dict", "7301.dic",NULL};
+      char *const parmList[] = {"./voice/pocketsphinx-5prealpha/src/programs/pocketsphinx_continuous","-inmic", "yes", "-lm","7301.lm","-dict", "7301.dic",NULL};
        if ((pid = fork()) == -1)
           perror("fork error");
        else if (pid == 0) {
@@ -121,7 +121,7 @@ pid_t pid;
        }
     //FIN DE LA CREACION HIJO CONTINUOUS
 
-*/
+
 
 	while( (acceptfd = accept(sfd, (struct sockaddr *)&direccion_cli,&direccion_cli_len)) > 0) {
 		switch (fork()) {
