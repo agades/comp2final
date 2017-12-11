@@ -20,23 +20,23 @@ int parser_puerto(char *archivo){
 	fd = open(archivo,O_RDONLY);
 	read (fd,buffer,sizeof(buffer));
 	close (fd);
-//	printf("lo que se leyo del archivo es:\n");
-//	write(1,buffer,sizeof(buffer));
+	//	printf("lo que se leyo del archivo es:\n");
+	//	write(1,buffer,sizeof(buffer));
 
 	if ( !strncmp (buffer, "port", 4 )) {
 		buf = strtok( buffer, "=" ); // primer token (puerto)
 
-	//	printf("primer token del parseo puerto: = \n");
-	//	write(1,buffer,sizeof(buffer));
-	//	printf("\n");
-	//	printf( "%s\n", buf );
+		//	printf("primer token del parseo puerto: = \n");
+		//	write(1,buffer,sizeof(buffer));
+		//	printf("\n");
+		//	printf( "%s\n", buf );
 
 		buf = strtok( NULL, "\n" ); // segundo token (numero puerto)
 
-	//	printf("segundo token del parseo puerto: n \n");
-        //         write(1,buffer,sizeof(buffer));
-	//	printf("\n");
-	//	printf( "%s\n", buf );
+		//	printf("segundo token del parseo puerto: n \n");
+		//         write(1,buffer,sizeof(buffer));
+		//	printf("\n");
+		//	printf( "%s\n", buf );
 
 		puerto = atoi(buf);
 	}
@@ -69,12 +69,12 @@ char *parser_ruta(char *archivo){
 		buf = strtok( buffer, "/" );
 
 		buf = strtok( NULL, "\n" );  
-	//	printf("\n\%s",buf); 
+		//	printf("\n\%s",buf); 
 
 		strcpy (ruta,buf2);
 		strcat(ruta,buf);
 
-	//	printf ("\n buff: %s\n",ruta);
+		//	printf ("\n buff: %s\n",ruta);
 
 
 	}
