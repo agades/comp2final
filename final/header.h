@@ -18,8 +18,6 @@
 #include <netinet/in.h>
 #include <netdb.h>
 
-//#include "arduino-serial-lib.c"
-//#include "arduino-serial-lib.h"
 
 #include <mqueue.h>
 
@@ -33,7 +31,7 @@ char *http_worker(int acceptfd,char *ruta,mqd_t sendqd,mqd_t receiveqd);
 
 char *recurso (char *buffer,char *archivo, char *tipo, long * longitud, char *ruta);
 
-int ardconnect(int acceptfd,mqd_t sendqd,mqd_t receiveqd);
+int ardconnect(int acceptfd,mqd_t sendqd,mqd_t receiveqd,char * orden);
 
 
 
